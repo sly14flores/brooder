@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char* ssid="autopilot";
-const char* password = "l3g3nd14";
+const char* ssid="Technical";
+const char* password = "p@ssw0rd";
 
 int ledPin = 13;
 
@@ -10,7 +10,7 @@ void setup() {
   
   pinMode(ledPin,OUTPUT);
   digitalWrite(ledPin,LOW);
-
+ 
   Serial.begin(115200);
   Serial.println();
   Serial.print("Wifi connecting to ");
@@ -37,5 +37,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  
 }
