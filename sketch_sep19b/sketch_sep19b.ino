@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
-const char* ssid="Technical";
-const char* password = "p@ssw0rd";
+const char* ssid="brooder";
+const char* password = "1010101010";
 
 int ledPin = 13;
 
@@ -17,6 +17,11 @@ void setup() {
   Serial.println( ssid );
 
   WiFi.begin(ssid,password);
+
+  IPAddress ip(192,168,4,2);
+  IPAddress gateway(192,168,4,1);   
+  IPAddress subnet(255,255,255,0);   
+  WiFi.config(ip, gateway, subnet);
 
   Serial.println();
   Serial.print("Connecting");
