@@ -16,10 +16,11 @@
 #define LED_PIN D7
 
 // Update these with values suitable for your network.
-const char* ssid = "autopilot";
-const char* password = "l3g3nd14";
+const char* ssid = "Apps";
+const char* password = "1010101010";
 // const char* mqtt_server = "broker.mqtt-dashboard.com";
-const char* mqtt_server = "iot.eclipse.org";
+// const char* mqtt_server = "iot.eclipse.org";
+const char* mqtt_server = "192.168.10.1";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
