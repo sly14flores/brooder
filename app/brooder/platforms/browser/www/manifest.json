@@ -6,6 +6,12 @@
   "version": "com.app.brooder",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "author": "Apache Cordova Team",
-  "icons": [],
+  "icons": [
+    {
+      "src": "res/icon/android/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
   "start_url": "index.html"
 }

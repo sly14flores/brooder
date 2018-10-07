@@ -15,6 +15,9 @@
 // Define NodeMCU D3 pin  connect to LED
 #define LED_PIN D7
 
+// for temperature
+int outputpin = A0;
+
 // Update these with values suitable for your network.
 const char* ssid = "Apps";
 const char* password = "1010101010";
@@ -115,10 +118,29 @@ void setup() {
  digitalWrite(LED_PIN, LOW);
 }
 
+void temperature() {
+
+  int analogValue = analogRead(outputpin);
+  float millivolts = (analogValue/1024.0) * 3300; //3300 is the voltage provided by NodeMCU
+  float celsius = millivolts/10;
+  Serial.print("in DegreeC=   ");
+  Serial.println(celsius);
+  
+  //---------- Here is the calculation for Fahrenheit ----------//
+  float fahrenheit = ((celsius * 9)/5 + 32);
+  Serial.print(" in Farenheit=   ");
+  Serial.println(fahrenheit);
+  delay(1000);
+
+}
+
 void loop() {
   if (!client.connected()) {
     reconnect();
   }
   client.loop();
+
+// for temperature
+temperature();
 
 }

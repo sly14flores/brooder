@@ -6,3 +6,5 @@ https://www.eclipse.org/paho/clients/js/
 https://techtutorialsx.com/2017/04/29/esp32-sending-json-messages-over-mqtt/
 
 https://github.com/arcoirislabs/cordova-plugin-mqtt
+
+https://www.instructables.com/id/IoT-Temperature-Sensor-With-ESP8266/
