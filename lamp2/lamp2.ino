@@ -19,11 +19,10 @@
 int outputpin = A0;
 
 // Update these with values suitable for your network.
-const char* ssid = "Apps";
-const char* password = "1010101010";
-// const char* mqtt_server = "broker.mqtt-dashboard.com";
-// const char* mqtt_server = "iot.eclipse.org";
-const char* mqtt_server = "192.168.10.1";
+const char* ssid = "TPLinkFiber";
+const char* password = "ActiveEyeElyu5";
+const char* mqtt_server = "broker.mqttdashboard.com";
+// const char* mqtt_server = "192.168.10.1";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -67,7 +66,7 @@ void callback(char* topic, byte* payload, unsigned int length)
   JSONencoder["Command"] = "Off";
   char JSONmessageBuffer[100];
   JSONencoder.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-  client.publish("brooder/lamp2/status", JSONmessageBuffer);   
+  client.publish("brooder/lamp/2/status", JSONmessageBuffer);   
     Serial.println(" Turn Off LED! ");
   } 
   // if MQTT comes a 1, turn on LED on pin D2
@@ -77,7 +76,7 @@ void callback(char* topic, byte* payload, unsigned int length)
   JSONencoder["Command"] = "On";
   char JSONmessageBuffer[100];
   JSONencoder.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));    
-  client.publish("brooder/lamp2/status", JSONmessageBuffer);    
+  client.publish("brooder/lamp/2/status", JSONmessageBuffer);    
     Serial.println(" Turn On LED! ");
   }
   Serial.println();
@@ -98,7 +97,7 @@ void reconnect() {
     {
       Serial.println("connected");
      //once connected to MQTT broker, subscribe command if any
-      client.subscribe("brooder/lamp2");
+      client.subscribe("brooder/lamp/2");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
