@@ -16,11 +16,10 @@
 int outputpin = A0;
 
 // Update these with values suitable for your network.
-const char* ssid = "Apps";
-const char* password = "1010101010";
-// const char* mqtt_server = "broker.mqtt-dashboard.com";
-// const char* mqtt_server = "iot.eclipse.org";
-const char* mqtt_server = "192.168.10.1";
+const char* ssid = "TPLinkFiber";
+const char* password = "ActiveEyeElyu5";
+const char* mqtt_server = "broker.mqttdashboard.com";
+// const char* mqtt_server = "192.168.10.1";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -130,8 +129,8 @@ void temperature() {
 void fan(float celsius) {
 
 	if (celsius>=41) {
-		client.publish("brooder/fan1", "1");
-		client.publish("brooder/fan2", "1");
+		client.publish("brooder/fan/1", "1");
+		client.publish("brooder/fan/2", "1");
 	}
 	
 }
