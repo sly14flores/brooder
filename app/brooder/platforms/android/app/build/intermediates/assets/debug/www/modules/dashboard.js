@@ -4,10 +4,15 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 		
 		var self = this;
 		
-		self.data = function(scope) {		
+		self.data = function(scope) {
 			
-/* 			client = new Paho.MQTT.Client("192.168.10.1", 1884, "");
+			scope.levels = {};
+			scope.levels.temperature = "0";
+			scope.levels.water = "0";		
+			scope.levels.feeder = "0";		
 			
+			client = new Paho.MQTT.Client("broker.mqttdashboard.com", 8000, "");
+
 			// set callback handlers
 			client.onConnectionLost = onConnectionLost;
 			client.onMessageArrived = onMessageArrived;
@@ -19,24 +24,61 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			function onConnect() {
 			  // Once a connection has been made, make a subscription and send a message.
 			  console.log("onConnect");
-			  client.subscribe("ledStatus");
+			  client.subscribe("brooder/water");
+			  client.subscribe("brooder/temperature");
+			  client.subscribe("brooder/feeder");
 			}
 
 			// called when the client loses its connection
 			function onConnectionLost(responseObject) {
-			  if (responseObject.errorCode !== 0) {
-				console.log("onConnectionLost:"+responseObject.errorMessage);
-			  }
-			}
+				
+				if (responseObject.errorCode !== 0) {
+					
+					console.log("onConnectionLost:"+responseObject.errorMessage);
+					
+				};
+				
+			};
 
 			// called when a message arrives
 			function onMessageArrived(message) {
-			  console.log(JSON.parse(message.payloadString));
-			} */
-			
+				
+				var msgObj = JSON.parse(message.payloadString);
+				
+				console.log(msgObj);
+				
+				switch (msgObj.device) {
+					
+					case "Water":
+					
+						scope.water.set(msgObj.distance);
+						scope.levels.water = msgObj.distance.toString();
+					
+					break;
+					
+					case "Temperature":
+					
+						scope.temperature.set(msgObj.degrees);
+						scope.levels.temperature = msgObj.degrees.toString();
+					
+					break;
+
+					case "Feeder":
+					
+						scope.feeder.set(msgObj.weight);
+						scope.levels.feeder = msgObj.weight.toString();					
+					
+					break;
+					
+				};
+				
+				scope.$apply();				
+			  
+			};
 			
 			temperature(scope);	
-			waterLevel(scope);	
+			waterLevel(scope);
+			feeder(scope);
 			
 		};
 		
@@ -61,11 +103,11 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			  
 			};
 			var target = document.getElementById('temperature'); // your canvas element
-			var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-			gauge.maxValue = 100; // set max gauge value
-			gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-			gauge.animationSpeed = 32; // set animation speed (32 is default value)
-			gauge.set(40); // set actual value
+			scope.temperature = new Gauge(target).setOptions(opts); // create sexy gauge!
+			scope.temperature.maxValue = 100; // set max gauge value
+			scope.temperature.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+			scope.temperature.animationSpeed = 32; // set animation speed (32 is default value)
+			scope.temperature.set(0); // set actual value
 			
 		};
 		
@@ -90,11 +132,40 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			  
 			};
 			var target = document.getElementById('water-level'); // your canvas element
-			var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
-			gauge.maxValue = 100; // set max gauge value
-			gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
-			gauge.animationSpeed = 32; // set animation speed (32 is default value)
-			gauge.set(20); // set actual value			
+			scope.water = new Donut(target).setOptions(opts); // create sexy gauge!
+			scope.water.maxValue = 100; // set max gauge value
+			scope.water.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+			scope.water.animationSpeed = 32; // set animation speed (32 is default value)
+			scope.water.set(0); // set actual value			
+			
+		};
+		
+		function feeder(scope) {
+			
+			var opts = {
+			  angle: 0.35, // The span of the gauge arc
+			  lineWidth: 0.1, // The line thickness
+			  radiusScale: 1, // Relative radius
+			  pointer: {
+				length: 0.6, // // Relative to gauge radius
+				strokeWidth: 0.035, // The thickness
+				color: '#000000' // Fill color
+			  },
+			  limitMax: false,     // If false, max value increases automatically if value > maxValue
+			  limitMin: false,     // If true, the min value of the gauge will be fixed
+			  colorStart: '#cb3434',   // Colors
+			  colorStop: '#f09d9d',    // just experiment with them
+			  strokeColor: '#EEEEEE',  // to see which ones work best for you
+			  generateGradient: true,
+			  highDpiSupport: true,     // High resolution support
+			  
+			};
+			var target = document.getElementById('feeder'); // your canvas element
+			scope.feeder = new Donut(target).setOptions(opts); // create sexy gauge!
+			scope.feeder.maxValue = 100; // set max gauge value
+			scope.feeder.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+			scope.feeder.animationSpeed = 32; // set animation speed (32 is default value)
+			scope.feeder.set(0); // set actual value				
 			
 		};
 		
