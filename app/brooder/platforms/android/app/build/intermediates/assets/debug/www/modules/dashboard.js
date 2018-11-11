@@ -11,22 +11,22 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			scope.levels.water = "0";		
 			scope.levels.feeder = "0";		
 			
-			client = new Paho.MQTT.Client("broker.mqttdashboard.com", 8000, "");
+			scope.client = new Paho.MQTT.Client("broker.mqttdashboard.com", 8000, "");
 
 			// set callback handlers
-			client.onConnectionLost = onConnectionLost;
-			client.onMessageArrived = onMessageArrived;
+			scope.client.onConnectionLost = onConnectionLost;
+			scope.client.onMessageArrived = onMessageArrived;
 
 			// connect the client
-			client.connect({onSuccess:onConnect});
+			scope.client.connect({onSuccess:onConnect});
 
 			// called when the client connects
 			function onConnect() {
 			  // Once a connection has been made, make a subscription and send a message.
 			  console.log("onConnect");
-			  client.subscribe("brooder/water");
-			  client.subscribe("brooder/temperature");
-			  client.subscribe("brooder/feeder");
+			  scope.client.subscribe("brooder/water");
+			  scope.client.subscribe("brooder/temperature");
+			  scope.client.subscribe("brooder/feeder");
 			}
 
 			// called when the client loses its connection
@@ -76,9 +76,9 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			  
 			};
 			
-			temperature(scope);	
-			waterLevel(scope);
-			feeder(scope);
+			// temperature(scope);	
+			// waterLevel(scope);
+			// feeder(scope);
 			
 		};
 		
@@ -167,22 +167,6 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			scope.feeder.animationSpeed = 32; // set animation speed (32 is default value)
 			scope.feeder.set(0); // set actual value				
 			
-		};
-		
-		self.on = function() {
-			
-			message = new Paho.MQTT.Message("1");
-			message.destinationName = "ledCommand";
-			client.send(message);
-			
-		};
-
-		self.off = function() {
-
-			message = new Paho.MQTT.Message("0");
-			message.destinationName = "ledCommand";
-			client.send(message);
-
 		};
 		
 	};

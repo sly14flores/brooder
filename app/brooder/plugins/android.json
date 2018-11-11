@@ -9,6 +9,10 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.app.brooder"
+    },
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
+      "PACKAGE_NAME": "com.app.brooder"
     }
   },
   "dependent_plugins": {}
