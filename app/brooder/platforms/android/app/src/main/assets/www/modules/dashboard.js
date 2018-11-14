@@ -76,13 +76,9 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			  
 			};
 			
-			// temperature(scope);	
-			// waterLevel(scope);
-			// feeder(scope);
-			
 		};
 		
-		function temperature(scope) {
+		self.temperature = function(scope) {
 			
 			var opts = {
 			  angle: 0.15, // The span of the gauge arc
@@ -111,7 +107,7 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			
 		};
 		
-		function waterLevel(scope) {
+		self.waterLevel = function(scope) {
 			
 			var opts = {
 			  angle: 0.35, // The span of the gauge arc
@@ -140,7 +136,7 @@ angular.module('dashboard-module', []).factory('dashboard', function() {
 			
 		};
 		
-		function feeder(scope) {
+		self.feeder = function(scope) {
 			
 			var opts = {
 			  angle: 0.35, // The span of the gauge arc
