@@ -1,6 +1,179 @@
 {
     "logs": [
         {
+            "outputFile": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\0b065f90d57fc4c77c7718faf17a633b\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "11,12,17,19,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,85,119,123,124,129,132,137,139,140",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "864,933,1249,1380,3011,3081,3149,3221,3291,3352,3413,3474,3536,3600,3662,3723,3791,3891,3951,4017,4090,4159,4216,4268,4330,4402,4478,4513,4548,4582,4617,4780,8593,8886,9003,9270,9563,9830,10026,10098",
+                        "endLines": "11,12,17,19,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,85,119,123,127,129,135,137,139,140",
+                        "endColumns": "68,62,57,73,69,67,71,69,60,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,33,34,34,69,70,116,12,109,12,128,71,66",
+                        "endOffsets": "928,991,1302,1449,3076,3144,3216,3286,3347,3408,3469,3531,3595,3657,3718,3786,3886,3946,4012,4085,4154,4211,4263,4325,4397,4473,4508,4543,4577,4612,4647,4845,8659,8998,9199,9375,9759,9954,10093,10160"
+                    }
+                },
+                {
+                    "source": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "109,111,112,113,114,115,116,118",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "7614,7840,7950,8032,8136,8239,8359,8517",
+                        "endColumns": "143,109,81,103,102,119,98,75",
+                        "endOffsets": "7753,7945,8027,8131,8234,8354,8453,8588"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-17.3.4.aar\\4adf56ddacedcf73d35ce4b0fa609793\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "110",
+                        "startColumns": "4",
+                        "startOffsets": "7758",
+                        "endColumns": "81",
+                        "endOffsets": "7835"
+                    }
+                },
+                {
+                    "source": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\src\\main\\res\\values\\cordova-plugin-firebase-strings.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "107,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "7464,7544",
+                        "endColumns": "79,69",
+                        "endOffsets": "7539,7609"
+                    }
+                },
+                {
+                    "source": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,14,15",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "150,1085,1129",
+                        "endColumns": "42,43,48",
+                        "endOffsets": "188,1124,1173"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\e77f7f98f0426d06d1f9d505d0180c09\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10,89,90,91,92,93,94,95,96,98,99,100,101,102,103,104,105,106",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "193,283,363,453,543,623,704,784,5131,5236,5417,5542,5649,5829,5952,6068,6338,6526,6631,6812,6937,7112,7260,7323,7385",
+                        "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78",
+                        "endOffsets": "278,358,448,538,618,699,779,859,5231,5412,5537,5644,5824,5947,6063,6166,6521,6626,6807,6932,7107,7255,7318,7380,7459"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\974e960e6f1bd21b93720b47b14f22df\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "13,16,18,83,128,130,131,136,138",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "996,1178,1307,4652,9204,9380,9502,9764,9959",
+                        "endColumns": "88,70,72,59,65,121,60,65,66",
+                        "endOffsets": "1080,1244,1375,4707,9265,9497,9558,9825,10021"
+                    }
+                },
+                {
+                    "source": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "86,87,117",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "4850,4914,8458",
+                        "endColumns": "63,51,58",
+                        "endOffsets": "4909,4961,8512"
+                    }
+                },
+                {
+                    "source": "D:\\brooder\\app\\brooder\\platforms\\android\\app\\build\\generated\\fabric\\res\\debug\\values\\com_crashlytics_build_id.xml",
+                    "from": {
+                        "startLines": "8",
+                        "startColumns": "0",
+                        "startOffsets": "311",
+                        "endColumns": "162",
+                        "endOffsets": "473"
+                    },
+                    "to": {
+                        "startLines": "88",
+                        "startColumns": "4",
+                        "startOffsets": "4966",
+                        "endColumns": "164",
+                        "endOffsets": "5126"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-tagmanager-16.0.5.aar\\4ec17d371fd73b64c5ed8dd5ba3e1697\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "120,121,122",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "8664,8734,8818",
+                        "endColumns": "69,83,67",
+                        "endOffsets": "8729,8813,8881"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\sly\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-16.1.0.aar\\350333aa43bd13cd8782b44a64863c81\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "84,97",
+                        "startColumns": "4,4",
+                        "startOffsets": "4712,6171",
+                        "endColumns": "67,166",
+                        "endOffsets": "4775,6333"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\Users\\Sly\\cordova\\brooder\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {

@@ -10,7 +10,7 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.app.brooder"
     },
-    "phonegap-plugin-push": {
+    "cordova-plugin-firebase": {
       "PACKAGE_NAME": "com.app.brooder"
     }
   },

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "207997037519",
+    "firebase_url": "https://chicken-brooder.firebaseio.com",
+    "project_id": "chicken-brooder",
+    "storage_bucket": "chicken-brooder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207997037519:android:d391f7d349a5136a",
+        "android_client_info": {
+          "package_name": "com.app.brooder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207997037519-49seguvbhdeoe8tvjm9uuqh8tkrhgmvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgtRfDGVOuHvDpY6JJxPbGVk4lCL9CdUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

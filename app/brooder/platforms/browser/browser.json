@@ -10,31 +10,23 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.app.brooder"
     },
-    "phonegap-plugin-push": {
+    "cordova-plugin-firebase": {
       "PACKAGE_NAME": "com.app.brooder"
     }
   },
   "dependent_plugins": {},
   "modules": [
     {
-      "file": "plugins/phonegap-plugin-push/www/push.js",
-      "id": "phonegap-plugin-push.PushNotification",
-      "pluginId": "phonegap-plugin-push",
+      "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "pluginId": "cordova-plugin-firebase",
       "clobbers": [
-        "PushNotification"
-      ]
-    },
-    {
-      "file": "plugins/phonegap-plugin-push/www/browser/push.js",
-      "id": "phonegap-plugin-push.BrowserPush",
-      "pluginId": "phonegap-plugin-push",
-      "clobbers": [
-        "PushNotification"
+        "FirebasePlugin"
       ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.3.3",
-    "phonegap-plugin-push": "2.1.3"
+    "cordova-plugin-firebase": "2.0.5"
   }
 }

@@ -1,4 +1,4 @@
-var app = angular.module('dashboard',['ngRoute','dashboard-module','lamps-module','fans-module']);
+var app = angular.module('dashboard',['ngRoute','dashboard-module','lamps-module','fans-module','container-module']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -16,11 +16,11 @@ app.config(function($routeProvider) {
     });
 });
 
-app.controller('dashboardCtrl',function($scope,$routeParams,$location,$timeout,dashboard,lamps,fans) {
+app.controller('dashboardCtrl',function($scope,$routeParams,$location,$timeout,dashboard,lamps,fans,container) {
 
 	$scope.dashboard = dashboard;
 	
-	$scope.dashboard.data($scope);
+	$scope.dashboard.data($scope);	
 	
 	$scope.view = {};
 	$scope.view.page_title = "Dashboard";
@@ -42,7 +42,13 @@ app.controller('dashboardCtrl',function($scope,$routeParams,$location,$timeout,d
 				$scope.view.selected.dashboard = true;
 				$scope.view.selected.lamps = false;
 				$scope.view.selected.fans = false;
-				$scope.view.selected.container = false;			
+				$scope.view.selected.container = false;
+			
+				$timeout(function() {
+					dashboard.temperature($scope);
+					dashboard.waterLevel($scope);
+					dashboard.feeder($scope);
+				}, 1000);
 			
 			break;
 		   
@@ -91,5 +97,6 @@ app.controller('dashboardCtrl',function($scope,$routeParams,$location,$timeout,d
 	
 	$scope.lamps = lamps;
 	$scope.fans = fans;
+	$scope.container = container;
 
 });

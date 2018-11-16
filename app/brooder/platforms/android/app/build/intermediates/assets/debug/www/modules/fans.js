@@ -13,7 +13,7 @@ angular.module('fans-module', []).factory('fans', function() {
 		};
 		
 		self.one = function(scope,opt) {
-			console.log(opt);
+
 			var option = (opt)?"1":"0";
 			
 			message = new Paho.MQTT.Message(option);
